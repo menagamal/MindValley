@@ -10,13 +10,21 @@
 		4891AF1E8BFC5ABD45910797 /* Pods_MindValley.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCF83675F1ED64272F1DF166 /* Pods_MindValley.framework */; };
 		D0B01ECE27F95D3600E2837F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B01ECD27F95D3600E2837F /* AppDelegate.swift */; };
 		D0B01ED027F95D3600E2837F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B01ECF27F95D3600E2837F /* SceneDelegate.swift */; };
-		D0B01ED227F95D3600E2837F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B01ED127F95D3600E2837F /* ViewController.swift */; };
+		D0B01ED227F95D3600E2837F /* ChannelsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B01ED127F95D3600E2837F /* ChannelsViewController.swift */; };
 		D0B01ED527F95D3600E2837F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0B01ED327F95D3600E2837F /* Main.storyboard */; };
 		D0B01ED727F95D3800E2837F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0B01ED627F95D3800E2837F /* Assets.xcassets */; };
 		D0B01EDA27F95D3800E2837F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0B01ED827F95D3800E2837F /* LaunchScreen.storyboard */; };
 		D0B01EE527F95D3800E2837F /* MindValleyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B01EE427F95D3800E2837F /* MindValleyTests.swift */; };
 		D0B01EEF27F95D3800E2837F /* MindValleyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B01EEE27F95D3800E2837F /* MindValleyUITests.swift */; };
 		D0B01EF127F95D3800E2837F /* MindValleyUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B01EF027F95D3800E2837F /* MindValleyUITestsLaunchTests.swift */; };
+		D0B01F0827F9605400E2837F /* ChannelsProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B01F0727F9605400E2837F /* ChannelsProtocols.swift */; };
+		D0B01F0A27F960EA00E2837F /* ChannelsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B01F0927F960EA00E2837F /* ChannelsPresenter.swift */; };
+		D0B01F0C27F9613900E2837F /* ChannelsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B01F0B27F9613900E2837F /* ChannelsInteractor.swift */; };
+		D0B01F0E27F9616400E2837F /* ChannelsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B01F0D27F9616400E2837F /* ChannelsRouter.swift */; };
+		D0B01F1127F9623E00E2837F /* BasePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B01F1027F9623E00E2837F /* BasePresenter.swift */; };
+		D0B01F1327F9624700E2837F /* BaseInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B01F1227F9624700E2837F /* BaseInteractor.swift */; };
+		D0B01F1527F962F300E2837F /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B01F1427F962F300E2837F /* BaseViewController.swift */; };
+		D0B01F1727F963A900E2837F /* ChannelsBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B01F1627F963A900E2837F /* ChannelsBuilder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,7 +51,7 @@
 		D0B01ECA27F95D3600E2837F /* MindValley.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MindValley.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0B01ECD27F95D3600E2837F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D0B01ECF27F95D3600E2837F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		D0B01ED127F95D3600E2837F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D0B01ED127F95D3600E2837F /* ChannelsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelsViewController.swift; sourceTree = "<group>"; };
 		D0B01ED427F95D3600E2837F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D0B01ED627F95D3800E2837F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D0B01ED927F95D3800E2837F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -53,6 +61,14 @@
 		D0B01EEA27F95D3800E2837F /* MindValleyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MindValleyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0B01EEE27F95D3800E2837F /* MindValleyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MindValleyUITests.swift; sourceTree = "<group>"; };
 		D0B01EF027F95D3800E2837F /* MindValleyUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MindValleyUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		D0B01F0727F9605400E2837F /* ChannelsProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelsProtocols.swift; sourceTree = "<group>"; };
+		D0B01F0927F960EA00E2837F /* ChannelsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelsPresenter.swift; sourceTree = "<group>"; };
+		D0B01F0B27F9613900E2837F /* ChannelsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelsInteractor.swift; sourceTree = "<group>"; };
+		D0B01F0D27F9616400E2837F /* ChannelsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelsRouter.swift; sourceTree = "<group>"; };
+		D0B01F1027F9623E00E2837F /* BasePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasePresenter.swift; sourceTree = "<group>"; };
+		D0B01F1227F9624700E2837F /* BaseInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseInteractor.swift; sourceTree = "<group>"; };
+		D0B01F1427F962F300E2837F /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		D0B01F1627F963A900E2837F /* ChannelsBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelsBuilder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,10 +130,10 @@
 		D0B01ECC27F95D3600E2837F /* MindValley */ = {
 			isa = PBXGroup;
 			children = (
+				D0B01F0F27F9618100E2837F /* Base */,
+				D0B01EFD27F95F9400E2837F /* ChannelsViewController */,
 				D0B01ECD27F95D3600E2837F /* AppDelegate.swift */,
 				D0B01ECF27F95D3600E2837F /* SceneDelegate.swift */,
-				D0B01ED127F95D3600E2837F /* ViewController.swift */,
-				D0B01ED327F95D3600E2837F /* Main.storyboard */,
 				D0B01ED627F95D3800E2837F /* Assets.xcassets */,
 				D0B01ED827F95D3800E2837F /* LaunchScreen.storyboard */,
 				D0B01EDB27F95D3800E2837F /* Info.plist */,
@@ -142,13 +158,92 @@
 			path = MindValleyUITests;
 			sourceTree = "<group>";
 		};
+		D0B01EFD27F95F9400E2837F /* ChannelsViewController */ = {
+			isa = PBXGroup;
+			children = (
+				D0B01F0527F9602400E2837F /* Interactor */,
+				D0B01F0427F9600100E2837F /* Router */,
+				D0B01F0327F95FF700E2837F /* Protocols */,
+				D0B01F0227F95FF200E2837F /* Builder */,
+				D0B01F0627F9602900E2837F /* Presenter */,
+				D0B01F0127F95FEB00E2837F /* Entity */,
+				D0B01EFE27F95FCB00E2837F /* View */,
+			);
+			path = ChannelsViewController;
+			sourceTree = "<group>";
+		};
+		D0B01EFE27F95FCB00E2837F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D0B01ED127F95D3600E2837F /* ChannelsViewController.swift */,
+				D0B01ED327F95D3600E2837F /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D0B01F0127F95FEB00E2837F /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		D0B01F0227F95FF200E2837F /* Builder */ = {
+			isa = PBXGroup;
+			children = (
+				D0B01F1627F963A900E2837F /* ChannelsBuilder.swift */,
+			);
+			path = Builder;
+			sourceTree = "<group>";
+		};
+		D0B01F0327F95FF700E2837F /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				D0B01F0727F9605400E2837F /* ChannelsProtocols.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		D0B01F0427F9600100E2837F /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				D0B01F0D27F9616400E2837F /* ChannelsRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		D0B01F0527F9602400E2837F /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				D0B01F0B27F9613900E2837F /* ChannelsInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		D0B01F0627F9602900E2837F /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				D0B01F0927F960EA00E2837F /* ChannelsPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		D0B01F0F27F9618100E2837F /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				D0B01F1027F9623E00E2837F /* BasePresenter.swift */,
+				D0B01F1227F9624700E2837F /* BaseInteractor.swift */,
+				D0B01F1427F962F300E2837F /* BaseViewController.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
 		E9D275FADA2112C2A2B29DD8 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
 				7A020EDC8BD24DAFAAEB8FD1 /* Pods-MindValley.debug.xcconfig */,
 				81A1400BB10FE332879E4D1F /* Pods-MindValley.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -327,9 +422,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D0B01ED227F95D3600E2837F /* ViewController.swift in Sources */,
+				D0B01F0E27F9616400E2837F /* ChannelsRouter.swift in Sources */,
+				D0B01F1727F963A900E2837F /* ChannelsBuilder.swift in Sources */,
+				D0B01F1127F9623E00E2837F /* BasePresenter.swift in Sources */,
+				D0B01F1327F9624700E2837F /* BaseInteractor.swift in Sources */,
+				D0B01ED227F95D3600E2837F /* ChannelsViewController.swift in Sources */,
+				D0B01F0A27F960EA00E2837F /* ChannelsPresenter.swift in Sources */,
+				D0B01F1527F962F300E2837F /* BaseViewController.swift in Sources */,
 				D0B01ECE27F95D3600E2837F /* AppDelegate.swift in Sources */,
 				D0B01ED027F95D3600E2837F /* SceneDelegate.swift in Sources */,
+				D0B01F0C27F9613900E2837F /* ChannelsInteractor.swift in Sources */,
+				D0B01F0827F9605400E2837F /* ChannelsProtocols.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
