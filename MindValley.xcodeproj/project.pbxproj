@@ -25,6 +25,7 @@
 		D0B01F1327F9624700E2837F /* BaseInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B01F1227F9624700E2837F /* BaseInteractor.swift */; };
 		D0B01F1527F962F300E2837F /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B01F1427F962F300E2837F /* BaseViewController.swift */; };
 		D0B01F1727F963A900E2837F /* ChannelsBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B01F1627F963A900E2837F /* ChannelsBuilder.swift */; };
+		D0B01F1A27F9690400E2837F /* Roboto-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D0B01F1927F9690400E2837F /* Roboto-Black.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,7 @@
 		D0B01F1227F9624700E2837F /* BaseInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseInteractor.swift; sourceTree = "<group>"; };
 		D0B01F1427F962F300E2837F /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		D0B01F1627F963A900E2837F /* ChannelsBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelsBuilder.swift; sourceTree = "<group>"; };
+		D0B01F1927F9690400E2837F /* Roboto-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Black.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +132,7 @@
 		D0B01ECC27F95D3600E2837F /* MindValley */ = {
 			isa = PBXGroup;
 			children = (
+				D0B01F1827F968E600E2837F /* Resources */,
 				D0B01F0F27F9618100E2837F /* Base */,
 				D0B01EFD27F95F9400E2837F /* ChannelsViewController */,
 				D0B01ECD27F95D3600E2837F /* AppDelegate.swift */,
@@ -236,6 +239,14 @@
 				D0B01F1427F962F300E2837F /* BaseViewController.swift */,
 			);
 			path = Base;
+			sourceTree = "<group>";
+		};
+		D0B01F1827F968E600E2837F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D0B01F1927F9690400E2837F /* Roboto-Black.ttf */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		E9D275FADA2112C2A2B29DD8 /* Pods */ = {
@@ -356,6 +367,7 @@
 				D0B01EDA27F95D3800E2837F /* LaunchScreen.storyboard in Resources */,
 				D0B01ED727F95D3800E2837F /* Assets.xcassets in Resources */,
 				D0B01ED527F95D3600E2837F /* Main.storyboard in Resources */,
+				D0B01F1A27F9690400E2837F /* Roboto-Black.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
