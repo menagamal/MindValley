@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4891AF1E8BFC5ABD45910797 /* Pods_MindValley.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCF83675F1ED64272F1DF166 /* Pods_MindValley.framework */; };
+		D084C20827F98730007A0E77 /* CircularImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D084C20727F98730007A0E77 /* CircularImageView.swift */; };
 		D0B01ECE27F95D3600E2837F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B01ECD27F95D3600E2837F /* AppDelegate.swift */; };
 		D0B01ED027F95D3600E2837F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B01ECF27F95D3600E2837F /* SceneDelegate.swift */; };
 		D0B01ED227F95D3600E2837F /* ChannelsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B01ED127F95D3600E2837F /* ChannelsViewController.swift */; };
@@ -26,6 +27,10 @@
 		D0B01F1527F962F300E2837F /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B01F1427F962F300E2837F /* BaseViewController.swift */; };
 		D0B01F1727F963A900E2837F /* ChannelsBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B01F1627F963A900E2837F /* ChannelsBuilder.swift */; };
 		D0B01F1A27F9690400E2837F /* Roboto-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D0B01F1927F9690400E2837F /* Roboto-Black.ttf */; };
+		D0F6A30E27F96BAF0033DD71 /* ChannelTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F6A30C27F96BAF0033DD71 /* ChannelTableViewCell.swift */; };
+		D0F6A30F27F96BAF0033DD71 /* ChannelTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0F6A30D27F96BAF0033DD71 /* ChannelTableViewCell.xib */; };
+		D0F6A31227F979710033DD71 /* ChannelTableViewCellDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F6A31127F979710033DD71 /* ChannelTableViewCellDataSource.swift */; };
+		D0F6A31527F984AD0033DD71 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F6A31427F984AD0033DD71 /* UIView+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +54,7 @@
 		7A020EDC8BD24DAFAAEB8FD1 /* Pods-MindValley.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MindValley.debug.xcconfig"; path = "Target Support Files/Pods-MindValley/Pods-MindValley.debug.xcconfig"; sourceTree = "<group>"; };
 		81A1400BB10FE332879E4D1F /* Pods-MindValley.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MindValley.release.xcconfig"; path = "Target Support Files/Pods-MindValley/Pods-MindValley.release.xcconfig"; sourceTree = "<group>"; };
 		CCF83675F1ED64272F1DF166 /* Pods_MindValley.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MindValley.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D084C20727F98730007A0E77 /* CircularImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularImageView.swift; sourceTree = "<group>"; };
 		D0B01ECA27F95D3600E2837F /* MindValley.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MindValley.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0B01ECD27F95D3600E2837F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D0B01ECF27F95D3600E2837F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -71,6 +77,10 @@
 		D0B01F1427F962F300E2837F /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		D0B01F1627F963A900E2837F /* ChannelsBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelsBuilder.swift; sourceTree = "<group>"; };
 		D0B01F1927F9690400E2837F /* Roboto-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Black.ttf"; sourceTree = "<group>"; };
+		D0F6A30C27F96BAF0033DD71 /* ChannelTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelTableViewCell.swift; sourceTree = "<group>"; };
+		D0F6A30D27F96BAF0033DD71 /* ChannelTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChannelTableViewCell.xib; sourceTree = "<group>"; };
+		D0F6A31127F979710033DD71 /* ChannelTableViewCellDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelTableViewCellDataSource.swift; sourceTree = "<group>"; };
+		D0F6A31427F984AD0033DD71 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +117,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		D084C20627F98723007A0E77 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				D084C20727F98730007A0E77 /* CircularImageView.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		D0B01EC127F95D3600E2837F = {
 			isa = PBXGroup;
 			children = (
@@ -132,6 +150,8 @@
 		D0B01ECC27F95D3600E2837F /* MindValley */ = {
 			isa = PBXGroup;
 			children = (
+				D084C20627F98723007A0E77 /* Helpers */,
+				D0F6A31327F984A20033DD71 /* Extensions */,
 				D0B01F1827F968E600E2837F /* Resources */,
 				D0B01F0F27F9618100E2837F /* Base */,
 				D0B01EFD27F95F9400E2837F /* ChannelsViewController */,
@@ -178,6 +198,8 @@
 		D0B01EFE27F95FCB00E2837F /* View */ = {
 			isa = PBXGroup;
 			children = (
+				D0F6A31027F979660033DD71 /* DataSources */,
+				D0F6A30B27F96B850033DD71 /* ChannelTableCell */,
 				D0B01ED127F95D3600E2837F /* ChannelsViewController.swift */,
 				D0B01ED327F95D3600E2837F /* Main.storyboard */,
 			);
@@ -247,6 +269,31 @@
 				D0B01F1927F9690400E2837F /* Roboto-Black.ttf */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		D0F6A30B27F96B850033DD71 /* ChannelTableCell */ = {
+			isa = PBXGroup;
+			children = (
+				D0F6A30C27F96BAF0033DD71 /* ChannelTableViewCell.swift */,
+				D0F6A30D27F96BAF0033DD71 /* ChannelTableViewCell.xib */,
+			);
+			path = ChannelTableCell;
+			sourceTree = "<group>";
+		};
+		D0F6A31027F979660033DD71 /* DataSources */ = {
+			isa = PBXGroup;
+			children = (
+				D0F6A31127F979710033DD71 /* ChannelTableViewCellDataSource.swift */,
+			);
+			path = DataSources;
+			sourceTree = "<group>";
+		};
+		D0F6A31327F984A20033DD71 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				D0F6A31427F984AD0033DD71 /* UIView+Extensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		E9D275FADA2112C2A2B29DD8 /* Pods */ = {
@@ -364,6 +411,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0F6A30F27F96BAF0033DD71 /* ChannelTableViewCell.xib in Resources */,
 				D0B01EDA27F95D3800E2837F /* LaunchScreen.storyboard in Resources */,
 				D0B01ED727F95D3800E2837F /* Assets.xcassets in Resources */,
 				D0B01ED527F95D3600E2837F /* Main.storyboard in Resources */,
@@ -434,13 +482,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0F6A31527F984AD0033DD71 /* UIView+Extensions.swift in Sources */,
 				D0B01F0E27F9616400E2837F /* ChannelsRouter.swift in Sources */,
+				D0F6A31227F979710033DD71 /* ChannelTableViewCellDataSource.swift in Sources */,
 				D0B01F1727F963A900E2837F /* ChannelsBuilder.swift in Sources */,
 				D0B01F1127F9623E00E2837F /* BasePresenter.swift in Sources */,
 				D0B01F1327F9624700E2837F /* BaseInteractor.swift in Sources */,
 				D0B01ED227F95D3600E2837F /* ChannelsViewController.swift in Sources */,
+				D0F6A30E27F96BAF0033DD71 /* ChannelTableViewCell.swift in Sources */,
 				D0B01F0A27F960EA00E2837F /* ChannelsPresenter.swift in Sources */,
 				D0B01F1527F962F300E2837F /* BaseViewController.swift in Sources */,
+				D084C20827F98730007A0E77 /* CircularImageView.swift in Sources */,
 				D0B01ECE27F95D3600E2837F /* AppDelegate.swift in Sources */,
 				D0B01ED027F95D3600E2837F /* SceneDelegate.swift in Sources */,
 				D0B01F0C27F9613900E2837F /* ChannelsInteractor.swift in Sources */,

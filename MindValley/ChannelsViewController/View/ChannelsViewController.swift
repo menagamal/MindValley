@@ -8,10 +8,13 @@
 import UIKit
 
 class ChannelsViewController: BaseViewController, ChannelsViewProtocol {
+    @IBOutlet private weak var channelsTableView: UITableView!
+
     var presenter: ChannelsPresenterProtocol?
-    
+    private var dataSource: ChannelTableViewCellDataSource?
     override func viewDidLoad() {
         super.viewDidLoad()
+        dataSource = ChannelTableViewCellDataSource(tableView: channelsTableView)
     }
     
     override func viewWillAppear(_ animated: Bool) {
