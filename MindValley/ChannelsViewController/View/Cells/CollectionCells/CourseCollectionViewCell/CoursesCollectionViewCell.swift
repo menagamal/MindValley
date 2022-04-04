@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class CoursesCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var courseImageView: UIImageView!
@@ -15,9 +16,25 @@ class CoursesCollectionViewCell: UICollectionViewCell {
         super.awakeFromNib()
     }
 
-    func configure() {
+    func configureStartShimmering() {
         courseImageView.startShimmering()
         courseTitleLabel.startShimmering()
         courseSubLabel.startShimmering()
     }
+    
+    func configureWithMedia(media: Media){
+        courseImageView.stopShimmering()
+        courseTitleLabel.stopShimmering()
+        courseSubLabel.stopShimmering()
+        
+        courseTitleLabel.backgroundColor = .clear
+        courseSubLabel.backgroundColor = .clear
+        
+        courseTitleLabel.text = media.title
+        courseSubLabel.text = media.channel.title
+        if let url = URL(string: media.coverAsset.url) {
+            courseImageView.sd_setImage(with: url, completed: nil)
+        }
+    }
+    
 }

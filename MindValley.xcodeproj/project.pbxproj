@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		4891AF1E8BFC5ABD45910797 /* Pods_MindValley.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCF83675F1ED64272F1DF166 /* Pods_MindValley.framework */; };
 		D0216DBC27F9AD0A00072478 /* CourseCollectionCellDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0216DBB27F9AD0A00072478 /* CourseCollectionCellDataSource.swift */; };
+		D03E930927FA7E0F00FDE588 /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D03E930827FA7E0F00FDE588 /* ApiManager.swift */; };
+		D03E930B27FA86A500FDE588 /* ApiTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = D03E930A27FA86A500FDE588 /* ApiTarget.swift */; };
+		D03E930D27FA88BC00FDE588 /* EpisodesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D03E930C27FA88BC00FDE588 /* EpisodesResponse.swift */; };
 		D084C20827F98730007A0E77 /* CircularImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D084C20727F98730007A0E77 /* CircularImageView.swift */; };
 		D084C20C27F9A5C7007A0E77 /* CoursesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D084C20A27F9A5C7007A0E77 /* CoursesCollectionViewCell.swift */; };
 		D084C20D27F9A5C8007A0E77 /* CoursesCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D084C20B27F9A5C7007A0E77 /* CoursesCollectionViewCell.xib */; };
@@ -29,7 +32,6 @@
 		D0B01F0C27F9613900E2837F /* ChannelsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B01F0B27F9613900E2837F /* ChannelsInteractor.swift */; };
 		D0B01F0E27F9616400E2837F /* ChannelsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B01F0D27F9616400E2837F /* ChannelsRouter.swift */; };
 		D0B01F1127F9623E00E2837F /* BasePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B01F1027F9623E00E2837F /* BasePresenter.swift */; };
-		D0B01F1327F9624700E2837F /* BaseInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B01F1227F9624700E2837F /* BaseInteractor.swift */; };
 		D0B01F1527F962F300E2837F /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B01F1427F962F300E2837F /* BaseViewController.swift */; };
 		D0B01F1727F963A900E2837F /* ChannelsBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B01F1627F963A900E2837F /* ChannelsBuilder.swift */; };
 		D0B01F1A27F9690400E2837F /* Roboto-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D0B01F1927F9690400E2837F /* Roboto-Black.ttf */; };
@@ -61,6 +63,9 @@
 		81A1400BB10FE332879E4D1F /* Pods-MindValley.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MindValley.release.xcconfig"; path = "Target Support Files/Pods-MindValley/Pods-MindValley.release.xcconfig"; sourceTree = "<group>"; };
 		CCF83675F1ED64272F1DF166 /* Pods_MindValley.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MindValley.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0216DBB27F9AD0A00072478 /* CourseCollectionCellDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourseCollectionCellDataSource.swift; sourceTree = "<group>"; };
+		D03E930827FA7E0F00FDE588 /* ApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
+		D03E930A27FA86A500FDE588 /* ApiTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiTarget.swift; sourceTree = "<group>"; };
+		D03E930C27FA88BC00FDE588 /* EpisodesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodesResponse.swift; sourceTree = "<group>"; };
 		D084C20727F98730007A0E77 /* CircularImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularImageView.swift; sourceTree = "<group>"; };
 		D084C20A27F9A5C7007A0E77 /* CoursesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursesCollectionViewCell.swift; sourceTree = "<group>"; };
 		D084C20B27F9A5C7007A0E77 /* CoursesCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CoursesCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -85,7 +90,6 @@
 		D0B01F0B27F9613900E2837F /* ChannelsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelsInteractor.swift; sourceTree = "<group>"; };
 		D0B01F0D27F9616400E2837F /* ChannelsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelsRouter.swift; sourceTree = "<group>"; };
 		D0B01F1027F9623E00E2837F /* BasePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasePresenter.swift; sourceTree = "<group>"; };
-		D0B01F1227F9624700E2837F /* BaseInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseInteractor.swift; sourceTree = "<group>"; };
 		D0B01F1427F962F300E2837F /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		D0B01F1627F963A900E2837F /* ChannelsBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelsBuilder.swift; sourceTree = "<group>"; };
 		D0B01F1927F9690400E2837F /* Roboto-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Black.ttf"; sourceTree = "<group>"; };
@@ -127,6 +131,15 @@
 				CCF83675F1ED64272F1DF166 /* Pods_MindValley.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D03E930727FA7DF100FDE588 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				D03E930827FA7E0F00FDE588 /* ApiManager.swift */,
+				D03E930A27FA86A500FDE588 /* ApiTarget.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 		D084C20627F98723007A0E77 /* Helpers */ = {
@@ -206,6 +219,7 @@
 		D0B01ECC27F95D3600E2837F /* MindValley */ = {
 			isa = PBXGroup;
 			children = (
+				D03E930727FA7DF100FDE588 /* Network */,
 				D084C20627F98723007A0E77 /* Helpers */,
 				D0F6A31327F984A20033DD71 /* Extensions */,
 				D0B01F1827F968E600E2837F /* Resources */,
@@ -265,6 +279,7 @@
 		D0B01F0127F95FEB00E2837F /* Entity */ = {
 			isa = PBXGroup;
 			children = (
+				D03E930C27FA88BC00FDE588 /* EpisodesResponse.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -313,7 +328,6 @@
 			isa = PBXGroup;
 			children = (
 				D0B01F1027F9623E00E2837F /* BasePresenter.swift */,
-				D0B01F1227F9624700E2837F /* BaseInteractor.swift */,
 				D0B01F1427F962F300E2837F /* BaseViewController.swift */,
 			);
 			path = Base;
@@ -544,16 +558,17 @@
 			files = (
 				D0F6A31527F984AD0033DD71 /* UIView+Extensions.swift in Sources */,
 				D0B01F0E27F9616400E2837F /* ChannelsRouter.swift in Sources */,
+				D03E930D27FA88BC00FDE588 /* EpisodesResponse.swift in Sources */,
 				D0F6A31227F979710033DD71 /* ChannelTableViewCellDataSource.swift in Sources */,
 				D0B01F1727F963A900E2837F /* ChannelsBuilder.swift in Sources */,
 				D0AEF5A627FA17BC002978FE /* CategoryCollectionViewCell.swift in Sources */,
 				D0216DBC27F9AD0A00072478 /* CourseCollectionCellDataSource.swift in Sources */,
 				D0B01F1127F9623E00E2837F /* BasePresenter.swift in Sources */,
 				D084C20C27F9A5C7007A0E77 /* CoursesCollectionViewCell.swift in Sources */,
-				D0B01F1327F9624700E2837F /* BaseInteractor.swift in Sources */,
 				D0B01ED227F95D3600E2837F /* ChannelsViewController.swift in Sources */,
 				D0F6A30E27F96BAF0033DD71 /* ChannelTableViewCell.swift in Sources */,
 				D0B01F0A27F960EA00E2837F /* ChannelsPresenter.swift in Sources */,
+				D03E930927FA7E0F00FDE588 /* ApiManager.swift in Sources */,
 				D0B01F1527F962F300E2837F /* BaseViewController.swift in Sources */,
 				D084C20827F98730007A0E77 /* CircularImageView.swift in Sources */,
 				D0B01ECE27F95D3600E2837F /* AppDelegate.swift in Sources */,
@@ -561,6 +576,7 @@
 				D0AEF5A927FA1B26002978FE /* CategoryCollectionDataSource.swift in Sources */,
 				D0B01F0C27F9613900E2837F /* ChannelsInteractor.swift in Sources */,
 				D0B01F0827F9605400E2837F /* ChannelsProtocols.swift in Sources */,
+				D03E930B27FA86A500FDE588 /* ApiTarget.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -10,8 +10,11 @@ import UIKit
 
 class CourseCollectionCellDataSource: NSObject {
     var collectionView: UICollectionView
-    init(collectionView: UICollectionView, completion:@escaping (()->Void)) {
+    var media:[Media]?
+    
+    init(collectionView: UICollectionView, media:[Media]?, completion:@escaping (()->Void)) {
         self.collectionView = collectionView
+        self.media = media
         super.init()
         self.collectionView.dataSource = self
         self.collectionView.delegate = self
@@ -25,7 +28,7 @@ class CourseCollectionCellDataSource: NSObject {
 
 extension CourseCollectionCellDataSource : UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 2
+        return media?.count ?? 2
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -34,7 +37,11 @@ extension CourseCollectionCellDataSource : UICollectionViewDataSource, UICollect
             for: indexPath ) as? CoursesCollectionViewCell else {
                 return UICollectionViewCell()
             }
-        cell.configure()
+        if let media = media?[indexPath.row] {
+            cell.configureWithMedia(media: media)
+        } else {
+            cell.configureStartShimmering()
+        }
         return cell
     }
 

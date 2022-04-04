@@ -1,21 +1,31 @@
 //
-//  BaseInteractor.swift
+//  ApiManager.swift
 //  MindValley
 //
-//  Created by Mena Gamal on 03/04/2022.
+//  Created by Mena Gamal on 04/04/2022.
 //
 
 import Foundation
 import Moya
 
-class BaseInteractor<MoyaTarget: TargetType> {
-    var basePresenter: BasePresenterProtocol?
-    let provider = MoyaProvider<MoyaTarget>(callbackQueue: DispatchQueue.global(qos: .utility))
+protocol ApiManagerProtocol {
+    var basePresenter: BasePresenterProtocol? { get set}
+    var provider: MoyaProvider<ApiTarget>? { get set}
+    func request<T:Decodable>(targetType: ApiTarget,completion: @escaping (T) -> Void)
 }
 
-extension BaseInteractor {
-    func request<T:Decodable>(targetType: MoyaTarget, completion: @escaping (T) -> Void) {
-        provider.request(targetType.debugLog()) { result in
+class ApiManager: ApiManagerProtocol {
+    var basePresenter: BasePresenterProtocol?
+    var provider: MoyaProvider<ApiTarget>?
+    
+    init (basePresenter: BasePresenterProtocol) {
+        self.provider = MoyaProvider<ApiTarget>(callbackQueue: DispatchQueue.global(qos: .utility))
+        self.basePresenter = basePresenter
+    }
+
+    func request<T:Decodable>(targetType: ApiTarget,
+                              completion: @escaping (T) -> Void) {
+        provider?.request(targetType.debugLog()) { result in
             switch(result) {
             case .success(let response):
                 do {
@@ -32,7 +42,6 @@ extension BaseInteractor {
             }
         }
     }
-    
 }
 
 extension TargetType {
@@ -57,7 +66,7 @@ extension Response {
         #if DEBUG
         debugPrint("=======================================")
         debugPrint(self)
-        debugPrint(String(data: self.data, encoding: .utf8) ?? "ERROR")
+        debugPrint(String(data: self.data, encoding: .utf8) ?? "ERRRO")
         debugPrint("=======================================")
         #endif
         return self

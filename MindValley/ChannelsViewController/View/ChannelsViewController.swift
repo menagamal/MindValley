@@ -14,7 +14,8 @@ class ChannelsViewController: BaseViewController, ChannelsViewProtocol {
     private var dataSource: ChannelTableViewCellDataSource?
     override func viewDidLoad() {
         super.viewDidLoad()
-        dataSource = ChannelTableViewCellDataSource(tableView: channelsTableView)
+        dataSource = ChannelTableViewCellDataSource(tableView: channelsTableView, presenter: presenter)
+        presenter?.loadData()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -29,3 +30,8 @@ class ChannelsViewController: BaseViewController, ChannelsViewProtocol {
     
 }
 
+extension ChannelsViewController {
+    func didLoadEpisodes() {
+        dataSource?.reloadData()
+    }
+}

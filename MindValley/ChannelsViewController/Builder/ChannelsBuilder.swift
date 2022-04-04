@@ -22,15 +22,12 @@ class ChannelsBuilder {
             view.presenter = presenter
             interactor.presenter = presenter
             presenter.baseView = view
+            
+            let network = ApiManager(basePresenter: presenter)
+            interactor.network = network
             return view
         }
       
         return UIViewController()
-    }
-
-    private func handleBasePresenter(baseView: BaseViewController) -> BasePresenter {
-        let basePresenter = BasePresenter()
-        basePresenter.baseView = baseView
-        return basePresenter
     }
 }
