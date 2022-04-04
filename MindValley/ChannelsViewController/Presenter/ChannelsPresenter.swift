@@ -12,6 +12,7 @@ class ChannelsPresenter: BasePresenter, ChannelsPresenterProtocol {
     // Weak For Retain Cycle
     weak internal var view: ChannelsViewProtocol?
     var episodes: [Media]?
+    var categoires: [Category]?
     
     private let interactor: ChannelsInteractorInputProtocol?
     private let router: ChannelsRouterProtocol
@@ -26,10 +27,17 @@ class ChannelsPresenter: BasePresenter, ChannelsPresenterProtocol {
     
     func loadData() {
         interactor?.fetchEpisodes()
+        interactor?.fetchChannels()
+        interactor?.fetchCategories()
     }
 }
 
 extension ChannelsPresenter: ChannelsInteractorOutputProtocol {
+    func didFetchCategoires(categoires: [Category]) {
+        self.categoires = categoires
+        self.view?.didLoadCategories()
+    }
+    
     func didFetchEpisodes(media: [Media]) {
         self.episodes = media
         self.view?.didLoadEpisodes()

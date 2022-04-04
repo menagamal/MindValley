@@ -60,14 +60,15 @@ class ChannelTableViewCell: UITableViewCell {
         self.selectionStyle = .none
     }
     
-    func configureCategories() {
+    func configureCategories(categories: [Category]?) {
         categoryImageView.isHidden = true
         categoryLabel.isHidden = true
         subCategoryLabel.text = "Browse by categories"
         subCategoryLabel.font = UIFont(name: "Roboto", size: 20)
         subCategoryLabel.backgroundColor = .clear
         subCategoryLabel.stopShimmering()
-        categoriesDataSource = CategoryCollectionDataSource(collectionView: collectionView)
+        subCategoryLabel.stopShimmering()
+        categoriesDataSource = CategoryCollectionDataSource(collectionView: collectionView, categories: categories)
         self.selectionStyle = .none
     }
 }

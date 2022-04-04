@@ -93,7 +93,7 @@ private extension ChannelTableViewCellDataSource {
             for: indexPath) as? ChannelTableViewCell else {
                 return UITableViewCell()
         }
-        cell.configureCategories()
+        cell.configureCategories(categories: presenter?.categoires)
         return cell
     }
 }

@@ -23,6 +23,10 @@ class ChannelsInteractor: ChannelsInteractorInputProtocol {
     }
     
     func fetchCategories() {
+        network?.request(targetType: .fetchCategories, completion: { [weak self] (response: CategoriesResponse) in
+            let categoires = response.data.categories
+            self?.presenter?.didFetchCategoires(categoires: categoires)
+        })
     }
     
     

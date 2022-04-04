@@ -12,17 +12,20 @@ import UIKit
 protocol ChannelsViewProtocol: AnyObject {
     var presenter: ChannelsPresenterProtocol?  { get set }
     func didLoadEpisodes()
+    func didLoadCategories()
 }
 //MARK: Presenter -
 protocol ChannelsPresenterProtocol: AnyObject {
     var view: ChannelsViewProtocol?  { get set }
     func loadData()
     var episodes:[Media]?  { get set }
+    var categoires:[Category]?  { get set }
 }
 
 //MARK: Interactor -
 protocol ChannelsInteractorOutputProtocol: AnyObject {
-    func didFetchEpisodes(media: [Media]) 
+    func didFetchEpisodes(media: [Media])
+    func didFetchCategoires(categoires: [Category]) 
 }
 protocol ChannelsInteractorInputProtocol: AnyObject {
     var presenter: ChannelsInteractorOutputProtocol?  { get set }
