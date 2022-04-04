@@ -25,19 +25,47 @@ class ChannelTableViewCellDataSource: NSObject {
 extension ChannelTableViewCellDataSource: UITableViewDataSource, UITableViewDelegate {
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 3
+        return ChannelOverviewSections.allCases.count
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
     }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let section = ChannelOverviewSections(rawValue: indexPath.section)
+        switch section {
+        case .categories:
+            return categoriesCell(tableView, cellForRowAt: indexPath)
+        default:
+            return courseCell(tableView, cellForRowAt: indexPath)
+        }
+    }
+}
+private extension ChannelTableViewCellDataSource {
+    func courseCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
         guard let cell = tableView.dequeueReusableCell(
             withIdentifier: "ChannelTableViewCell",
             for: indexPath) as? ChannelTableViewCell else {
                 return UITableViewCell()
         }
-        cell.startShimmering()
+        cell.configure()
         return cell
     }
+    
+    func categoriesCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
+        guard let cell = tableView.dequeueReusableCell(
+            withIdentifier: "ChannelTableViewCell",
+            for: indexPath) as? ChannelTableViewCell else {
+                return UITableViewCell()
+        }
+        cell.configureCategories()
+        return cell
+    }
+}
+
+enum ChannelOverviewSections: Int, CaseIterable {
+    case episodes
+    case content
+    case categories
 }

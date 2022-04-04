@@ -8,4 +8,6 @@ target 'MindValley' do
   # Pods for MindValley
     pod 'Moya'
     pod 'SDWebImage'
+    pod "AlignedCollectionViewFlowLayout"
+
 end

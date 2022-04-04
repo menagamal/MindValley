@@ -8,7 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		4891AF1E8BFC5ABD45910797 /* Pods_MindValley.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCF83675F1ED64272F1DF166 /* Pods_MindValley.framework */; };
+		D0216DBC27F9AD0A00072478 /* CourseCollectionCellDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0216DBB27F9AD0A00072478 /* CourseCollectionCellDataSource.swift */; };
 		D084C20827F98730007A0E77 /* CircularImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D084C20727F98730007A0E77 /* CircularImageView.swift */; };
+		D084C20C27F9A5C7007A0E77 /* CoursesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D084C20A27F9A5C7007A0E77 /* CoursesCollectionViewCell.swift */; };
+		D084C20D27F9A5C8007A0E77 /* CoursesCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D084C20B27F9A5C7007A0E77 /* CoursesCollectionViewCell.xib */; };
+		D0AEF5A627FA17BC002978FE /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0AEF5A427FA17BC002978FE /* CategoryCollectionViewCell.swift */; };
+		D0AEF5A727FA17BC002978FE /* CategoryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0AEF5A527FA17BC002978FE /* CategoryCollectionViewCell.xib */; };
+		D0AEF5A927FA1B26002978FE /* CategoryCollectionDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0AEF5A827FA1B26002978FE /* CategoryCollectionDataSource.swift */; };
 		D0B01ECE27F95D3600E2837F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B01ECD27F95D3600E2837F /* AppDelegate.swift */; };
 		D0B01ED027F95D3600E2837F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B01ECF27F95D3600E2837F /* SceneDelegate.swift */; };
 		D0B01ED227F95D3600E2837F /* ChannelsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B01ED127F95D3600E2837F /* ChannelsViewController.swift */; };
@@ -54,7 +60,13 @@
 		7A020EDC8BD24DAFAAEB8FD1 /* Pods-MindValley.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MindValley.debug.xcconfig"; path = "Target Support Files/Pods-MindValley/Pods-MindValley.debug.xcconfig"; sourceTree = "<group>"; };
 		81A1400BB10FE332879E4D1F /* Pods-MindValley.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MindValley.release.xcconfig"; path = "Target Support Files/Pods-MindValley/Pods-MindValley.release.xcconfig"; sourceTree = "<group>"; };
 		CCF83675F1ED64272F1DF166 /* Pods_MindValley.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MindValley.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D0216DBB27F9AD0A00072478 /* CourseCollectionCellDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourseCollectionCellDataSource.swift; sourceTree = "<group>"; };
 		D084C20727F98730007A0E77 /* CircularImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularImageView.swift; sourceTree = "<group>"; };
+		D084C20A27F9A5C7007A0E77 /* CoursesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursesCollectionViewCell.swift; sourceTree = "<group>"; };
+		D084C20B27F9A5C7007A0E77 /* CoursesCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CoursesCollectionViewCell.xib; sourceTree = "<group>"; };
+		D0AEF5A427FA17BC002978FE /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
+		D0AEF5A527FA17BC002978FE /* CategoryCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryCollectionViewCell.xib; sourceTree = "<group>"; };
+		D0AEF5A827FA1B26002978FE /* CategoryCollectionDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionDataSource.swift; sourceTree = "<group>"; };
 		D0B01ECA27F95D3600E2837F /* MindValley.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MindValley.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0B01ECD27F95D3600E2837F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D0B01ECF27F95D3600E2837F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -123,6 +135,50 @@
 				D084C20727F98730007A0E77 /* CircularImageView.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		D084C20927F9A5AF007A0E77 /* CourseCollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				D084C20A27F9A5C7007A0E77 /* CoursesCollectionViewCell.swift */,
+				D084C20B27F9A5C7007A0E77 /* CoursesCollectionViewCell.xib */,
+			);
+			path = CourseCollectionViewCell;
+			sourceTree = "<group>";
+		};
+		D084C20E27F9AA98007A0E77 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				D084C21027F9AAA4007A0E77 /* CollectionCells */,
+				D084C20F27F9AA9E007A0E77 /* TableCells */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		D084C20F27F9AA9E007A0E77 /* TableCells */ = {
+			isa = PBXGroup;
+			children = (
+				D0F6A30B27F96B850033DD71 /* ChannelTableCell */,
+			);
+			path = TableCells;
+			sourceTree = "<group>";
+		};
+		D084C21027F9AAA4007A0E77 /* CollectionCells */ = {
+			isa = PBXGroup;
+			children = (
+				D0AEF5A327FA174D002978FE /* CategoryCollectionViewCell */,
+				D084C20927F9A5AF007A0E77 /* CourseCollectionViewCell */,
+			);
+			path = CollectionCells;
+			sourceTree = "<group>";
+		};
+		D0AEF5A327FA174D002978FE /* CategoryCollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				D0AEF5A427FA17BC002978FE /* CategoryCollectionViewCell.swift */,
+				D0AEF5A527FA17BC002978FE /* CategoryCollectionViewCell.xib */,
+			);
+			path = CategoryCollectionViewCell;
 			sourceTree = "<group>";
 		};
 		D0B01EC127F95D3600E2837F = {
@@ -198,8 +254,8 @@
 		D0B01EFE27F95FCB00E2837F /* View */ = {
 			isa = PBXGroup;
 			children = (
+				D084C20E27F9AA98007A0E77 /* Cells */,
 				D0F6A31027F979660033DD71 /* DataSources */,
-				D0F6A30B27F96B850033DD71 /* ChannelTableCell */,
 				D0B01ED127F95D3600E2837F /* ChannelsViewController.swift */,
 				D0B01ED327F95D3600E2837F /* Main.storyboard */,
 			);
@@ -283,7 +339,9 @@
 		D0F6A31027F979660033DD71 /* DataSources */ = {
 			isa = PBXGroup;
 			children = (
+				D0216DBB27F9AD0A00072478 /* CourseCollectionCellDataSource.swift */,
 				D0F6A31127F979710033DD71 /* ChannelTableViewCellDataSource.swift */,
+				D0AEF5A827FA1B26002978FE /* CategoryCollectionDataSource.swift */,
 			);
 			path = DataSources;
 			sourceTree = "<group>";
@@ -412,6 +470,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				D0F6A30F27F96BAF0033DD71 /* ChannelTableViewCell.xib in Resources */,
+				D0AEF5A727FA17BC002978FE /* CategoryCollectionViewCell.xib in Resources */,
+				D084C20D27F9A5C8007A0E77 /* CoursesCollectionViewCell.xib in Resources */,
 				D0B01EDA27F95D3800E2837F /* LaunchScreen.storyboard in Resources */,
 				D0B01ED727F95D3800E2837F /* Assets.xcassets in Resources */,
 				D0B01ED527F95D3600E2837F /* Main.storyboard in Resources */,
@@ -486,7 +546,10 @@
 				D0B01F0E27F9616400E2837F /* ChannelsRouter.swift in Sources */,
 				D0F6A31227F979710033DD71 /* ChannelTableViewCellDataSource.swift in Sources */,
 				D0B01F1727F963A900E2837F /* ChannelsBuilder.swift in Sources */,
+				D0AEF5A627FA17BC002978FE /* CategoryCollectionViewCell.swift in Sources */,
+				D0216DBC27F9AD0A00072478 /* CourseCollectionCellDataSource.swift in Sources */,
 				D0B01F1127F9623E00E2837F /* BasePresenter.swift in Sources */,
+				D084C20C27F9A5C7007A0E77 /* CoursesCollectionViewCell.swift in Sources */,
 				D0B01F1327F9624700E2837F /* BaseInteractor.swift in Sources */,
 				D0B01ED227F95D3600E2837F /* ChannelsViewController.swift in Sources */,
 				D0F6A30E27F96BAF0033DD71 /* ChannelTableViewCell.swift in Sources */,
@@ -495,6 +558,7 @@
 				D084C20827F98730007A0E77 /* CircularImageView.swift in Sources */,
 				D0B01ECE27F95D3600E2837F /* AppDelegate.swift in Sources */,
 				D0B01ED027F95D3600E2837F /* SceneDelegate.swift in Sources */,
+				D0AEF5A927FA1B26002978FE /* CategoryCollectionDataSource.swift in Sources */,
 				D0B01F0C27F9613900E2837F /* ChannelsInteractor.swift in Sources */,
 				D0B01F0827F9605400E2837F /* ChannelsProtocols.swift in Sources */,
 			);
