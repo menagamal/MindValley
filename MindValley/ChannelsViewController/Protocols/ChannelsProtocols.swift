@@ -13,19 +13,22 @@ protocol ChannelsViewProtocol: AnyObject {
     var presenter: ChannelsPresenterProtocol?  { get set }
     func didLoadEpisodes()
     func didLoadCategories()
+    func didLoadChannels()
 }
 //MARK: Presenter -
 protocol ChannelsPresenterProtocol: AnyObject {
     var view: ChannelsViewProtocol?  { get set }
     func loadData()
-    var episodes:[Media]?  { get set }
+    var episodes:[EpisodesMedia]?  { get set }
     var categoires:[Category]?  { get set }
+    var channels: [Channel]?  { get set }
 }
 
 //MARK: Interactor -
 protocol ChannelsInteractorOutputProtocol: AnyObject {
-    func didFetchEpisodes(media: [Media])
-    func didFetchCategoires(categoires: [Category]) 
+    func didFetchEpisodes(media: [EpisodesMedia])
+    func didFetchCategoires(categoires: [Category])
+    func didFetchChannels(channels: [Channel])
 }
 protocol ChannelsInteractorInputProtocol: AnyObject {
     var presenter: ChannelsInteractorOutputProtocol?  { get set }

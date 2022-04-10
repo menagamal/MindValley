@@ -37,4 +37,8 @@ extension ChannelsViewController {
     func didLoadCategories() {
         dataSource?.reloadData()
     }
+    func didLoadChannels() {
+        dataSource?.reloadData()
+    }
+    
 }

@@ -21,6 +21,12 @@ class ChannelTableViewCellDataSource: NSObject {
         self.tableView.register(
             UINib(nibName: "ChannelTableViewCell", bundle: nil),
             forCellReuseIdentifier: "ChannelTableViewCell")
+        self.tableView.register(
+            UINib(nibName: "EpisodesTableCell", bundle: nil),
+            forCellReuseIdentifier: "EpisodesTableCell")
+        self.tableView.register(
+            UINib(nibName: "CategoryTableCell", bundle: nil),
+            forCellReuseIdentifier: "CategoryTableCell")
         self.tableView.reloadData()
     }
 
@@ -41,13 +47,9 @@ extension ChannelTableViewCellDataSource: UITableViewDataSource, UITableViewDele
         if let presenter = presenter {
             let section = ChannelOverviewSections(rawValue: section)
             switch section {
-            case .episodes:
-                return 1
             case .content:
-                return 1
-            case .categories:
-                return 1
-            case .none:
+                return presenter.channels?.count ?? 1
+            default:
                 return 1
             }
         }
@@ -73,14 +75,16 @@ private extension ChannelTableViewCellDataSource {
             for: indexPath) as? ChannelTableViewCell else {
                 return UITableViewCell()
         }
-        cell.configureContent()
+        if let channel = presenter?.channels?[indexPath.row] {
+            cell.configureContent(channel: channel)
+        }
         return cell
     }
     
     func episodesCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
         guard let cell = tableView.dequeueReusableCell(
-            withIdentifier: "ChannelTableViewCell",
-            for: indexPath) as? ChannelTableViewCell else {
+            withIdentifier: "EpisodesTableCell",
+            for: indexPath) as? EpisodesTableCell else {
                 return UITableViewCell()
         }
         cell.configureForEpisodes(media: presenter?.episodes)
@@ -89,8 +93,8 @@ private extension ChannelTableViewCellDataSource {
     
     func categoriesCell(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
         guard let cell = tableView.dequeueReusableCell(
-            withIdentifier: "ChannelTableViewCell",
-            for: indexPath) as? ChannelTableViewCell else {
+            withIdentifier: "CategoryTableCell",
+            for: indexPath) as? CategoryTableCell else {
                 return UITableViewCell()
         }
         cell.configureCategories(categories: presenter?.categoires)

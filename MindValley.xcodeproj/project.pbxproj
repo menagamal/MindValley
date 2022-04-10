@@ -13,6 +13,11 @@
 		D03E930B27FA86A500FDE588 /* ApiTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = D03E930A27FA86A500FDE588 /* ApiTarget.swift */; };
 		D03E930D27FA88BC00FDE588 /* EpisodesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D03E930C27FA88BC00FDE588 /* EpisodesResponse.swift */; };
 		D03E931127FAA3E700FDE588 /* CategoriesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D03E931027FAA3E700FDE588 /* CategoriesResponse.swift */; };
+		D03E931327FAA85700FDE588 /* ChannelsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D03E931227FAA85700FDE588 /* ChannelsResponse.swift */; };
+		D0583F4228029727001BF119 /* EpisodesTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0583F4028029727001BF119 /* EpisodesTableCell.swift */; };
+		D0583F4328029727001BF119 /* EpisodesTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0583F4128029727001BF119 /* EpisodesTableCell.xib */; };
+		D0583F46280298C5001BF119 /* CategoryTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0583F44280298C5001BF119 /* CategoryTableCell.swift */; };
+		D0583F47280298C5001BF119 /* CategoryTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0583F45280298C5001BF119 /* CategoryTableCell.xib */; };
 		D084C20827F98730007A0E77 /* CircularImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D084C20727F98730007A0E77 /* CircularImageView.swift */; };
 		D084C20C27F9A5C7007A0E77 /* CoursesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D084C20A27F9A5C7007A0E77 /* CoursesCollectionViewCell.swift */; };
 		D084C20D27F9A5C8007A0E77 /* CoursesCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D084C20B27F9A5C7007A0E77 /* CoursesCollectionViewCell.xib */; };
@@ -68,6 +73,11 @@
 		D03E930A27FA86A500FDE588 /* ApiTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiTarget.swift; sourceTree = "<group>"; };
 		D03E930C27FA88BC00FDE588 /* EpisodesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodesResponse.swift; sourceTree = "<group>"; };
 		D03E931027FAA3E700FDE588 /* CategoriesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesResponse.swift; sourceTree = "<group>"; };
+		D03E931227FAA85700FDE588 /* ChannelsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelsResponse.swift; sourceTree = "<group>"; };
+		D0583F4028029727001BF119 /* EpisodesTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodesTableCell.swift; sourceTree = "<group>"; };
+		D0583F4128029727001BF119 /* EpisodesTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EpisodesTableCell.xib; sourceTree = "<group>"; };
+		D0583F44280298C5001BF119 /* CategoryTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTableCell.swift; sourceTree = "<group>"; };
+		D0583F45280298C5001BF119 /* CategoryTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryTableCell.xib; sourceTree = "<group>"; };
 		D084C20727F98730007A0E77 /* CircularImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularImageView.swift; sourceTree = "<group>"; };
 		D084C20A27F9A5C7007A0E77 /* CoursesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursesCollectionViewCell.swift; sourceTree = "<group>"; };
 		D084C20B27F9A5C7007A0E77 /* CoursesCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CoursesCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -144,6 +154,24 @@
 			path = Network;
 			sourceTree = "<group>";
 		};
+		D0583F3E280296FA001BF119 /* EpisodesTableCell */ = {
+			isa = PBXGroup;
+			children = (
+				D0583F4028029727001BF119 /* EpisodesTableCell.swift */,
+				D0583F4128029727001BF119 /* EpisodesTableCell.xib */,
+			);
+			path = EpisodesTableCell;
+			sourceTree = "<group>";
+		};
+		D0583F3F2802970F001BF119 /* CategoryTableCell */ = {
+			isa = PBXGroup;
+			children = (
+				D0583F44280298C5001BF119 /* CategoryTableCell.swift */,
+				D0583F45280298C5001BF119 /* CategoryTableCell.xib */,
+			);
+			path = CategoryTableCell;
+			sourceTree = "<group>";
+		};
 		D084C20627F98723007A0E77 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
@@ -173,6 +201,8 @@
 		D084C20F27F9AA9E007A0E77 /* TableCells */ = {
 			isa = PBXGroup;
 			children = (
+				D0583F3F2802970F001BF119 /* CategoryTableCell */,
+				D0583F3E280296FA001BF119 /* EpisodesTableCell */,
 				D0F6A30B27F96B850033DD71 /* ChannelTableCell */,
 			);
 			path = TableCells;
@@ -283,6 +313,7 @@
 			children = (
 				D03E930C27FA88BC00FDE588 /* EpisodesResponse.swift */,
 				D03E931027FAA3E700FDE588 /* CategoriesResponse.swift */,
+				D03E931227FAA85700FDE588 /* ChannelsResponse.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -488,10 +519,12 @@
 			files = (
 				D0F6A30F27F96BAF0033DD71 /* ChannelTableViewCell.xib in Resources */,
 				D0AEF5A727FA17BC002978FE /* CategoryCollectionViewCell.xib in Resources */,
+				D0583F4328029727001BF119 /* EpisodesTableCell.xib in Resources */,
 				D084C20D27F9A5C8007A0E77 /* CoursesCollectionViewCell.xib in Resources */,
 				D0B01EDA27F95D3800E2837F /* LaunchScreen.storyboard in Resources */,
 				D0B01ED727F95D3800E2837F /* Assets.xcassets in Resources */,
 				D0B01ED527F95D3600E2837F /* Main.storyboard in Resources */,
+				D0583F47280298C5001BF119 /* CategoryTableCell.xib in Resources */,
 				D0B01F1A27F9690400E2837F /* Roboto-Black.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -563,7 +596,10 @@
 				D0B01F0E27F9616400E2837F /* ChannelsRouter.swift in Sources */,
 				D03E930D27FA88BC00FDE588 /* EpisodesResponse.swift in Sources */,
 				D0F6A31227F979710033DD71 /* ChannelTableViewCellDataSource.swift in Sources */,
+				D0583F46280298C5001BF119 /* CategoryTableCell.swift in Sources */,
 				D0B01F1727F963A900E2837F /* ChannelsBuilder.swift in Sources */,
+				D03E931327FAA85700FDE588 /* ChannelsResponse.swift in Sources */,
+				D0583F4228029727001BF119 /* EpisodesTableCell.swift in Sources */,
 				D0AEF5A627FA17BC002978FE /* CategoryCollectionViewCell.swift in Sources */,
 				D0216DBC27F9AD0A00072478 /* CourseCollectionCellDataSource.swift in Sources */,
 				D0B01F1127F9623E00E2837F /* BasePresenter.swift in Sources */,

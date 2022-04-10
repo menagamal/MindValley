@@ -13,6 +13,7 @@ import Moya
 enum ApiTarget  {
     case fetchEpisodes
     case fetchCategories
+    case fetchChannels
 }
 
 extension ApiTarget: TargetType {
@@ -31,6 +32,8 @@ extension ApiTarget: TargetType {
             return "z5AExTtw"
         case .fetchCategories :
             return "A0CgArX3"
+        case .fetchChannels:
+            return "Xt12uVhM" 
         }
     }
     
@@ -41,14 +44,14 @@ extension ApiTarget: TargetType {
     
     var method: Moya.Method{
         switch self {
-        case .fetchEpisodes,.fetchCategories:
+        case .fetchEpisodes,.fetchCategories, .fetchChannels:
             return .get
         }
     }
     
     var task: Task {
         switch self {
-        case.fetchEpisodes ,.fetchCategories:
+        case.fetchEpisodes ,.fetchCategories, .fetchChannels:
             return .requestPlain
         }
     }

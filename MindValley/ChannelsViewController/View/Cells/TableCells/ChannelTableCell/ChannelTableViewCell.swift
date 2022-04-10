@@ -16,8 +16,7 @@ class ChannelTableViewCell: UITableViewCell {
     private var courseDataSource: CourseCollectionCellDataSource?
     private var categoriesDataSource: CategoryCollectionDataSource?
     
-    
-    func configureForEpisodes(media:[Media]?) {
+    func configureForEpisodes(media:[EpisodesMedia]?) {
         
         categoryImageView.isHidden = true
         categoryLabel.isHidden = true
@@ -32,7 +31,7 @@ class ChannelTableViewCell: UITableViewCell {
         self.selectionStyle = .none
         
         courseDataSource = CourseCollectionCellDataSource(collectionView: collectionView,
-                                                          media: media,
+                                                          media: media, channel: nil,
                                                           completion: { [weak self] in
             guard let self = self else { return }
             DispatchQueue.main.async {
@@ -42,20 +41,36 @@ class ChannelTableViewCell: UITableViewCell {
                 self.layoutIfNeeded()
             }
         })
-        
     }
-    func configureContent() {
-        categoryImageView.startShimmering()
-        subCategoryLabel.startShimmering()
-        categoryLabel.startShimmering()
+
+    func configureContent(channel: Channel) {
+        categoryImageView.stopShimmering()
+        subCategoryLabel.stopShimmering()
+        categoryLabel.stopShimmering()
+        categoryLabel.backgroundColor = .clear
+        subCategoryLabel.backgroundColor = .clear
+        
+        categoryLabel.text = channel.title
+        if !channel.series.isEmpty {
+            subCategoryLabel.text = "\(channel.series.count) series"
+        } else if !channel.latestMedia.isEmpty {
+            subCategoryLabel.text = "\(channel.latestMedia.count) episodes"
+        }
+        if let url = URL(string: channel.coverAsset.url) {
+            categoryImageView.sd_setImage(with: url, completed: nil)
+        }
         courseDataSource = CourseCollectionCellDataSource(collectionView: collectionView,
-                                                          media: nil,
+                                                          media: nil, channel: channel,
                                                           completion: { [weak self] in
             guard let self = self else { return }
             let height = self.collectionView.collectionViewLayout.collectionViewContentSize.height
             self.collectionViewHeight.constant = height
+            if !channel.series.isEmpty {
+                self.collectionViewHeight.constant = self.collectionView.frame.height / 1.2
+            }
             self.setNeedsLayout()
             self.layoutIfNeeded()
+            self.collectionView.reloadData()
         })
         self.selectionStyle = .none
     }

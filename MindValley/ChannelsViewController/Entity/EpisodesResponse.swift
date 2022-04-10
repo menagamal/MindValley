@@ -13,18 +13,18 @@ struct EpisodesResponse: Codable {
 
 // MARK: - DataClass
 struct DataClass: Codable {
-    let media: [Media]
+    let media: [EpisodesMedia]
 }
 
 // MARK: - Media
-struct Media: Codable {
+struct EpisodesMedia: Codable {
     let type, title: String
     let coverAsset: CoverAsset
-    let channel: Channel
+    let channel: Episode
 }
 
 // MARK: - Channel
-struct Channel: Codable {
+struct Episode: Codable {
     let title: String
 }
 
