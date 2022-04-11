@@ -10,11 +10,17 @@ import Foundation
 // MARK: - ChannelsResponse
 struct ChannelsResponse: Codable {
     let data: ChannelsDataClass
+    init () {
+        data = ChannelsDataClass()
+    }
 }
 
 // MARK: - DataClass
 struct ChannelsDataClass: Codable {
     let channels: [Channel]
+    init () {
+        channels = [Channel()]
+    }
 }
 
 // MARK: - Channel
@@ -27,6 +33,16 @@ struct Channel: Codable {
     let iconAsset: IconAsset?
     let coverAsset: CoverAsset
     let slug: String?
+    init() {
+        title = ""
+        series = [Series]()
+        mediaCount = 1
+        latestMedia = [LatestMedia]()
+        id = ""
+        iconAsset = nil
+        slug = nil
+        coverAsset = CoverAsset()
+    }
 }
 
 // MARK: - IconAsset
@@ -45,6 +61,11 @@ struct LatestMedia: Codable {
     let type: TypeEnum
     let title: String
     let coverAsset: CoverAsset
+    init() {
+        type = .course
+        title = ""
+        coverAsset = CoverAsset()
+    }
 }
 
 enum TypeEnum: String, Codable {
@@ -57,4 +78,9 @@ struct Series: Codable {
     let title: String
     let coverAsset: CoverAsset
     let id: String?
+    init() {
+        title = ""
+        coverAsset = CoverAsset()
+        id = ""
+    }
 }

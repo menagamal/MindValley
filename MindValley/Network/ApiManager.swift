@@ -9,21 +9,34 @@ import Foundation
 import Moya
 
 protocol ApiManagerProtocol {
-    var basePresenter: BasePresenterProtocol? { get set}
-    var provider: MoyaProvider<ApiTarget>? { get set}
-    func request<T:Decodable>(targetType: ApiTarget,completion: @escaping (T) -> Void)
+    func fetchChannelsFromServer(completion: @escaping (ChannelsResponse) -> Void)
+    func fetchCategoriesFromServer(completion: @escaping (CategoriesResponse) -> Void)
+    func fetchEpisodesFromServer(completion: @escaping (EpisodesResponse) -> Void) 
 }
 
 class ApiManager: ApiManagerProtocol {
-    var basePresenter: BasePresenterProtocol?
-    var provider: MoyaProvider<ApiTarget>?
+    private var basePresenter: BasePresenterProtocol?
+    private var provider: MoyaProvider<ApiTarget>?
     
     init (basePresenter: BasePresenterProtocol) {
         self.provider = MoyaProvider<ApiTarget>(callbackQueue: DispatchQueue.global(qos: .utility))
         self.basePresenter = basePresenter
     }
 
-    func request<T:Decodable>(targetType: ApiTarget,
+    func fetchChannelsFromServer(completion: @escaping (ChannelsResponse) -> Void) {
+        request(targetType: .fetchChannels, completion: completion)
+    }
+    
+    func fetchCategoriesFromServer(completion: @escaping (CategoriesResponse) -> Void) {
+        request(targetType: .fetchCategories, completion: completion)
+    }
+    
+    
+    func fetchEpisodesFromServer(completion: @escaping (EpisodesResponse) -> Void) {
+        request(targetType: .fetchEpisodes, completion: completion)
+    }
+
+    private func request<T:Decodable>(targetType: ApiTarget,
                               completion: @escaping (T) -> Void) {
         provider?.request(targetType.debugLog()) { result in
             switch(result) {

@@ -8,6 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		4891AF1E8BFC5ABD45910797 /* Pods_MindValley.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCF83675F1ED64272F1DF166 /* Pods_MindValley.framework */; };
+		D01D971E2803D25500252DC9 /* ChannelsPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01D971D2803D25500252DC9 /* ChannelsPresenterTests.swift */; };
+		D01D97222803D50200252DC9 /* ViewMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01D97212803D50200252DC9 /* ViewMock.swift */; };
+		D01D97242803D50900252DC9 /* RouterMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01D97232803D50900252DC9 /* RouterMock.swift */; };
+		D01D97262803D51500252DC9 /* InteractorMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01D97252803D51500252DC9 /* InteractorMock.swift */; };
+		D01D97282803DBCB00252DC9 /* InteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01D97272803DBCB00252DC9 /* InteractorTests.swift */; };
+		D01D972A2803DC0C00252DC9 /* PresenterMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01D97292803DC0C00252DC9 /* PresenterMock.swift */; };
+		D01D972C2803DC1B00252DC9 /* CacheManagerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01D972B2803DC1B00252DC9 /* CacheManagerMock.swift */; };
+		D01D972E2803DD5600252DC9 /* NetworkMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01D972D2803DD5600252DC9 /* NetworkMock.swift */; };
 		D0216DBC27F9AD0A00072478 /* CourseCollectionCellDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0216DBB27F9AD0A00072478 /* CourseCollectionCellDataSource.swift */; };
 		D03E930927FA7E0F00FDE588 /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D03E930827FA7E0F00FDE588 /* ApiManager.swift */; };
 		D03E930B27FA86A500FDE588 /* ApiTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = D03E930A27FA86A500FDE588 /* ApiTarget.swift */; };
@@ -30,7 +38,6 @@
 		D0B01ED527F95D3600E2837F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0B01ED327F95D3600E2837F /* Main.storyboard */; };
 		D0B01ED727F95D3800E2837F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0B01ED627F95D3800E2837F /* Assets.xcassets */; };
 		D0B01EDA27F95D3800E2837F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0B01ED827F95D3800E2837F /* LaunchScreen.storyboard */; };
-		D0B01EE527F95D3800E2837F /* MindValleyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B01EE427F95D3800E2837F /* MindValleyTests.swift */; };
 		D0B01EEF27F95D3800E2837F /* MindValleyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B01EEE27F95D3800E2837F /* MindValleyUITests.swift */; };
 		D0B01EF127F95D3800E2837F /* MindValleyUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B01EF027F95D3800E2837F /* MindValleyUITestsLaunchTests.swift */; };
 		D0B01F0827F9605400E2837F /* ChannelsProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B01F0727F9605400E2837F /* ChannelsProtocols.swift */; };
@@ -69,6 +76,14 @@
 		7A020EDC8BD24DAFAAEB8FD1 /* Pods-MindValley.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MindValley.debug.xcconfig"; path = "Target Support Files/Pods-MindValley/Pods-MindValley.debug.xcconfig"; sourceTree = "<group>"; };
 		81A1400BB10FE332879E4D1F /* Pods-MindValley.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MindValley.release.xcconfig"; path = "Target Support Files/Pods-MindValley/Pods-MindValley.release.xcconfig"; sourceTree = "<group>"; };
 		CCF83675F1ED64272F1DF166 /* Pods_MindValley.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MindValley.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D01D971D2803D25500252DC9 /* ChannelsPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelsPresenterTests.swift; sourceTree = "<group>"; };
+		D01D97212803D50200252DC9 /* ViewMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewMock.swift; sourceTree = "<group>"; };
+		D01D97232803D50900252DC9 /* RouterMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterMock.swift; sourceTree = "<group>"; };
+		D01D97252803D51500252DC9 /* InteractorMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractorMock.swift; sourceTree = "<group>"; };
+		D01D97272803DBCB00252DC9 /* InteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractorTests.swift; sourceTree = "<group>"; };
+		D01D97292803DC0C00252DC9 /* PresenterMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterMock.swift; sourceTree = "<group>"; };
+		D01D972B2803DC1B00252DC9 /* CacheManagerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheManagerMock.swift; sourceTree = "<group>"; };
+		D01D972D2803DD5600252DC9 /* NetworkMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMock.swift; sourceTree = "<group>"; };
 		D0216DBB27F9AD0A00072478 /* CourseCollectionCellDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourseCollectionCellDataSource.swift; sourceTree = "<group>"; };
 		D03E930827FA7E0F00FDE588 /* ApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
 		D03E930A27FA86A500FDE588 /* ApiTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiTarget.swift; sourceTree = "<group>"; };
@@ -94,7 +109,6 @@
 		D0B01ED927F95D3800E2837F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D0B01EDB27F95D3800E2837F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D0B01EE027F95D3800E2837F /* MindValleyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MindValleyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		D0B01EE427F95D3800E2837F /* MindValleyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MindValleyTests.swift; sourceTree = "<group>"; };
 		D0B01EEA27F95D3800E2837F /* MindValleyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MindValleyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0B01EEE27F95D3800E2837F /* MindValleyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MindValleyUITests.swift; sourceTree = "<group>"; };
 		D0B01EF027F95D3800E2837F /* MindValleyUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MindValleyUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -145,6 +159,28 @@
 				CCF83675F1ED64272F1DF166 /* Pods_MindValley.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D01D971F2803D25C00252DC9 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				D01D971D2803D25500252DC9 /* ChannelsPresenterTests.swift */,
+				D01D97272803DBCB00252DC9 /* InteractorTests.swift */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		D01D97202803D26400252DC9 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				D01D97212803D50200252DC9 /* ViewMock.swift */,
+				D01D97232803D50900252DC9 /* RouterMock.swift */,
+				D01D97252803D51500252DC9 /* InteractorMock.swift */,
+				D01D97292803DC0C00252DC9 /* PresenterMock.swift */,
+				D01D972B2803DC1B00252DC9 /* CacheManagerMock.swift */,
+				D01D972D2803DD5600252DC9 /* NetworkMock.swift */,
+			);
+			path = Mocks;
 			sourceTree = "<group>";
 		};
 		D03E930727FA7DF100FDE588 /* Network */ = {
@@ -272,7 +308,8 @@
 		D0B01EE327F95D3800E2837F /* MindValleyTests */ = {
 			isa = PBXGroup;
 			children = (
-				D0B01EE427F95D3800E2837F /* MindValleyTests.swift */,
+				D01D97202803D26400252DC9 /* Mocks */,
+				D01D971F2803D25C00252DC9 /* Tests */,
 			);
 			path = MindValleyTests;
 			sourceTree = "<group>";
@@ -636,7 +673,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D0B01EE527F95D3800E2837F /* MindValleyTests.swift in Sources */,
+				D01D972E2803DD5600252DC9 /* NetworkMock.swift in Sources */,
+				D01D97262803D51500252DC9 /* InteractorMock.swift in Sources */,
+				D01D97282803DBCB00252DC9 /* InteractorTests.swift in Sources */,
+				D01D972A2803DC0C00252DC9 /* PresenterMock.swift in Sources */,
+				D01D97242803D50900252DC9 /* RouterMock.swift in Sources */,
+				D01D97222803D50200252DC9 /* ViewMock.swift in Sources */,
+				D01D972C2803DC1B00252DC9 /* CacheManagerMock.swift in Sources */,
+				D01D971E2803D25500252DC9 /* ChannelsPresenterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
