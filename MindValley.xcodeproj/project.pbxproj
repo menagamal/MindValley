@@ -41,6 +41,7 @@
 		D0B01F1527F962F300E2837F /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B01F1427F962F300E2837F /* BaseViewController.swift */; };
 		D0B01F1727F963A900E2837F /* ChannelsBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B01F1627F963A900E2837F /* ChannelsBuilder.swift */; };
 		D0B01F1A27F9690400E2837F /* Roboto-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D0B01F1927F9690400E2837F /* Roboto-Black.ttf */; };
+		D0C4270C2802B11F00F360A6 /* CachingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C4270B2802B11F00F360A6 /* CachingManager.swift */; };
 		D0F6A30E27F96BAF0033DD71 /* ChannelTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F6A30C27F96BAF0033DD71 /* ChannelTableViewCell.swift */; };
 		D0F6A30F27F96BAF0033DD71 /* ChannelTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0F6A30D27F96BAF0033DD71 /* ChannelTableViewCell.xib */; };
 		D0F6A31227F979710033DD71 /* ChannelTableViewCellDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F6A31127F979710033DD71 /* ChannelTableViewCellDataSource.swift */; };
@@ -105,6 +106,7 @@
 		D0B01F1427F962F300E2837F /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		D0B01F1627F963A900E2837F /* ChannelsBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelsBuilder.swift; sourceTree = "<group>"; };
 		D0B01F1927F9690400E2837F /* Roboto-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Black.ttf"; sourceTree = "<group>"; };
+		D0C4270B2802B11F00F360A6 /* CachingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CachingManager.swift; sourceTree = "<group>"; };
 		D0F6A30C27F96BAF0033DD71 /* ChannelTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelTableViewCell.swift; sourceTree = "<group>"; };
 		D0F6A30D27F96BAF0033DD71 /* ChannelTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChannelTableViewCell.xib; sourceTree = "<group>"; };
 		D0F6A31127F979710033DD71 /* ChannelTableViewCellDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelTableViewCellDataSource.swift; sourceTree = "<group>"; };
@@ -251,6 +253,7 @@
 		D0B01ECC27F95D3600E2837F /* MindValley */ = {
 			isa = PBXGroup;
 			children = (
+				D0C4270A2802B10900F360A6 /* Cache */,
 				D03E930727FA7DF100FDE588 /* Network */,
 				D084C20627F98723007A0E77 /* Helpers */,
 				D0F6A31327F984A20033DD71 /* Extensions */,
@@ -373,6 +376,14 @@
 				D0B01F1927F9690400E2837F /* Roboto-Black.ttf */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		D0C4270A2802B10900F360A6 /* Cache */ = {
+			isa = PBXGroup;
+			children = (
+				D0C4270B2802B11F00F360A6 /* CachingManager.swift */,
+			);
+			path = Cache;
 			sourceTree = "<group>";
 		};
 		D0F6A30B27F96B850033DD71 /* ChannelTableCell */ = {
@@ -611,6 +622,7 @@
 				D0B01F1527F962F300E2837F /* BaseViewController.swift in Sources */,
 				D084C20827F98730007A0E77 /* CircularImageView.swift in Sources */,
 				D0B01ECE27F95D3600E2837F /* AppDelegate.swift in Sources */,
+				D0C4270C2802B11F00F360A6 /* CachingManager.swift in Sources */,
 				D03E931127FAA3E700FDE588 /* CategoriesResponse.swift in Sources */,
 				D0B01ED027F95D3600E2837F /* SceneDelegate.swift in Sources */,
 				D0AEF5A927FA1B26002978FE /* CategoryCollectionDataSource.swift in Sources */,

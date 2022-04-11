@@ -7,7 +7,7 @@
 import Foundation
 
 // MARK: - EpisodesResponse
-struct EpisodesResponse: Codable {
+class EpisodesResponse: Codable {
     let data: DataClass
 }
 

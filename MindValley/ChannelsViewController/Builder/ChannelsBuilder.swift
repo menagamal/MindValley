@@ -25,6 +25,7 @@ class ChannelsBuilder {
             
             let network = ApiManager(basePresenter: presenter)
             interactor.network = network
+            interactor.cacheManager = CachingManager()
             return view
         }
       

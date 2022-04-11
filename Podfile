@@ -9,5 +9,5 @@ target 'MindValley' do
     pod 'Moya'
     pod 'SDWebImage'
     pod "AlignedCollectionViewFlowLayout"
-
+    pod 'Cache'
 end

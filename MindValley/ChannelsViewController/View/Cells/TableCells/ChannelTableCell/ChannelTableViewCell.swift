@@ -14,35 +14,7 @@ class ChannelTableViewCell: UITableViewCell {
     @IBOutlet private weak var categoryLabel: UILabel!
     @IBOutlet private weak var collectionViewHeight: NSLayoutConstraint!
     private var courseDataSource: CourseCollectionCellDataSource?
-    private var categoriesDataSource: CategoryCollectionDataSource?
     
-    func configureForEpisodes(media:[EpisodesMedia]?) {
-        
-        categoryImageView.isHidden = true
-        categoryLabel.isHidden = true
-        categoryImageView.backgroundColor = .clear
-        categoryLabel.backgroundColor = .clear
-        
-        subCategoryLabel.text = "New Episodes"
-        subCategoryLabel.font = UIFont(name: "Roboto", size: 20)
-        subCategoryLabel.backgroundColor = .clear
-        subCategoryLabel.stopShimmering()
-        
-        self.selectionStyle = .none
-        
-        courseDataSource = CourseCollectionCellDataSource(collectionView: collectionView,
-                                                          media: media, channel: nil,
-                                                          completion: { [weak self] in
-            guard let self = self else { return }
-            DispatchQueue.main.async {
-                let height = self.collectionView.collectionViewLayout.collectionViewContentSize.height
-                self.collectionViewHeight.constant = height
-                self.setNeedsLayout()
-                self.layoutIfNeeded()
-            }
-        })
-    }
-
     func configureContent(channel: Channel) {
         categoryImageView.stopShimmering()
         subCategoryLabel.stopShimmering()
@@ -60,7 +32,8 @@ class ChannelTableViewCell: UITableViewCell {
             categoryImageView.sd_setImage(with: url, completed: nil)
         }
         courseDataSource = CourseCollectionCellDataSource(collectionView: collectionView,
-                                                          media: nil, channel: channel,
+                                                          media: nil,
+                                                          channel: channel,
                                                           completion: { [weak self] in
             guard let self = self else { return }
             let height = self.collectionView.collectionViewLayout.collectionViewContentSize.height
@@ -72,18 +45,6 @@ class ChannelTableViewCell: UITableViewCell {
             self.layoutIfNeeded()
             self.collectionView.reloadData()
         })
-        self.selectionStyle = .none
-    }
-    
-    func configureCategories(categories: [Category]?) {
-        categoryImageView.isHidden = true
-        categoryLabel.isHidden = true
-        subCategoryLabel.text = "Browse by categories"
-        subCategoryLabel.font = UIFont(name: "Roboto", size: 20)
-        subCategoryLabel.backgroundColor = .clear
-        subCategoryLabel.stopShimmering()
-        subCategoryLabel.stopShimmering()
-        categoriesDataSource = CategoryCollectionDataSource(collectionView: collectionView, categories: categories)
         self.selectionStyle = .none
     }
 }

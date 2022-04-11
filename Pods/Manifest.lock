@@ -1,6 +1,7 @@
 PODS:
   - Alamofire (5.4.4)
   - AlignedCollectionViewFlowLayout (1.1.2)
+  - Cache (6.0.0)
   - Moya (15.0.0):
     - Moya/Core (= 15.0.0)
   - Moya/Core (15.0.0):
@@ -11,6 +12,7 @@ PODS:
 
 DEPENDENCIES:
   - AlignedCollectionViewFlowLayout
+  - Cache
   - Moya
   - SDWebImage
 
@@ -18,15 +20,17 @@ SPEC REPOS:
   trunk:
     - Alamofire
     - AlignedCollectionViewFlowLayout
+    - Cache
     - Moya
     - SDWebImage
 
 SPEC CHECKSUMS:
   Alamofire: f3b09a368f1582ab751b3fff5460276e0d2cf5c9
   AlignedCollectionViewFlowLayout: ee2ef451e741ec08f8e0967d828001e2f051c20a
+  Cache: 4ca7e00363fca5455f26534e5607634c820ffc2d
   Moya: 138f0573e53411fb3dc17016add0b748dfbd78ee
   SDWebImage: 4ea20cca2986adc5aacde07aa686742fd4c67a37
 
-PODFILE CHECKSUM: 8a5b2e602f40b3bf6c4c8a49788de7a3533bf53e
+PODFILE CHECKSUM: 5c6c1c756a48132187029825ed2b445000da73af
 
 COCOAPODS: 1.11.0
